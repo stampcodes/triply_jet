@@ -1,0 +1,20 @@
+.cardImage {
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: #333333;
+}
+
+.cardDescription {
+  width: 400px;
+}
+
+.cardButton {
+  margin-top: 10px;
+}

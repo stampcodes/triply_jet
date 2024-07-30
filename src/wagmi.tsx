@@ -29,6 +29,14 @@ createWeb3Modal({
   projectId,
   enableAnalytics: true,
   enableOnramp: true,
+  themeVariables: {
+    "--w3m-accent": "#397cd6",
+    "--w3m-color-mix": "#397cd6",
+    "--w3m-color-mix-strength": 30,
+    "--w3m-font-family": "Poppins, sans-serif",
+    "--w3m-font-size-master": "11px",
+    "--w3m-border-radius-master": "2px",
+  },
 });
 
 interface Web3ModalProviderProps {
