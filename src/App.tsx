@@ -1,11 +1,12 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
-function App() {
+const App = () => {
   return (
     <>
-      <w3m-button />
+      <Navbar />
     </>
   );
-}
+};
 
 export default App;
