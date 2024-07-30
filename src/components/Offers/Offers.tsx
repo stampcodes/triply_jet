@@ -6,7 +6,7 @@ const Offers = () => {
   return (
     <>
       <section className={styles.offers}>
-        <h1 className={styles.title}>Our Latest Offers</h1>
+        <h2 className={styles.title}>Our Latest Offers</h2>
         <div className={styles.offersCard}>
           {data.cards.map((card) => (
             <Card key={card.id} card={card} />
