@@ -11,10 +11,10 @@ const data: { cards: Card[] } = {
   cards: [
     {
       id: 1,
-      name: "Tradition and Technology in Japan",
+      name: "Tradition and Tech in Japan",
       image: "japan.jpg",
       description:
-        "Experience the best of Japan with a mix of traditional and modern experiences.",
+        "Discover the best of Japan with traditional tea ceremonies, ancient temples, and modern technology in Tokyo.",
       travelDates: "15 Oct - 25 Oct",
       price: 0.1,
     },

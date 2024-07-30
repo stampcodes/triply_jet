@@ -4,3 +4,32 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+::selection {
+  background: #333333;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #333333;
+  color: #ffffff;
+}
+
+/* ----------- SCROLL BAR -------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #397cd6;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #629ce8;
+}

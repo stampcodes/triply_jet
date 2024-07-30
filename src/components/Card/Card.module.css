@@ -1,14 +1,26 @@
 .cardImage {
-  width: 300px;
+  width: 330px;
+  height: 230px;
   padding: 10px;
   border-radius: 20px;
 }
 
 .card {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   color: #333333;
+  border: 1px solid lightgray;
+  margin: 7px;
+  border-radius: 20px;
+  padding: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: #d4f4dd;
 }
 
 .cardDescription {
@@ -17,4 +29,17 @@
 
 .cardButton {
   margin-top: 10px;
+  background-color: #397cd6;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
 }

@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ card }) => {
           <h2 className={styles.cardName}>{card.name}</h2>
           <p className={styles.cardDescription}>{card.description}</p>
           <p className={styles.cardDates}>{card.travelDates}</p>
-          <p className={styles.cardPrice}>${card.price.toFixed(2)}k</p>
+          <p className={styles.cardPrice}>{card.price} ETH</p>
           <button className={styles.cardButton}>View Offer</button>
         </div>
       </article>
