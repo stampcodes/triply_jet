@@ -13,7 +13,8 @@ const data: { cards: Card[] } = {
     {
       id: 1,
       name: "Tradition and Tech in Japan",
-      image: "/japan.jpg",
+      image:
+        "https://ipfs.io/ipfs/Qme5y9QRgto9od3mYVN36hg5bPwQbhEpyvqhSMCULZHYQf",
       description:
         "Discover the best of Japan with traditional tea ceremonies, ancient temples, and modern technology in Tokyo.",
       details:
@@ -24,7 +25,8 @@ const data: { cards: Card[] } = {
     {
       id: 2,
       name: "Safari and Skyline South Africa",
-      image: "/africa.jpg",
+      image:
+        "https://ipfs.io/ipfs/QmTr2GpVmgU46wuP1U2iDFKkN5m8AtWN1UsqsEtnyqs85Q",
       description:
         "Embark on an adventure through South Africa's breathtaking landscapes, combining thrilling safaris with vibrant cityscapes.",
       details:
@@ -35,7 +37,8 @@ const data: { cards: Card[] } = {
     {
       id: 3,
       name: "Hawaiian Paradise",
-      image: "/hawaii.jpg",
+      image:
+        "https://ipfs.io/ipfs/QmYSz2Lsfo1UWUAKzEAms1xA7EcYmkzvjqPeoTndg8CVqy",
       description:
         "Discover the ultimate tropical escape in Hawaii, with pristine beaches, lush landscapes, and a rich cultural heritage.",
       details:
