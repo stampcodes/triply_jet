@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.css";
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <img className={styles.logo} src=".\logo.png" alt="logo" />

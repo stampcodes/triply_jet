@@ -1,6 +1,6 @@
 import styles from "./BenefitsSection.module.css";
 
-const BenefitsSection = () => {
+const BenefitsSection: React.FC = () => {
   return (
     <>
       <section className={styles.container}>

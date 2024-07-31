@@ -2,7 +2,7 @@ import styles from "./Offers.module.css";
 import Card from "../Card/Card";
 import data from "../../data/data";
 
-const Offers = () => {
+const Offers: React.FC = () => {
   return (
     <>
       <section className={styles.offers}>
