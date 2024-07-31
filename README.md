@@ -1,10 +1,10 @@
 # TriplyJet
 
-This project is a comprehensive decentralized application (dApp) for trip planning and management, built using TypeScript and Vite. It aims to streamline the process of organizing and managing trips with a modern web interface.
+This project is a comprehensive decentralized application (dApp) for a hypothetical travel agency, built using TypeScript and Vite. It aims to streamline the process of booking trips with a modern web interface and blockchain technology.
 
 ## Overview
 
-This project facilitates the planning and management of trips using modern web development tools and blockchain technology.
+This project facilitates the booking of trips using modern web development tools and Ethereum-based payments.
 
 ## Features
 
