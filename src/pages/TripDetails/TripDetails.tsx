@@ -2,11 +2,10 @@ import { useParams } from "react-router-dom";
 import data, { Card } from "../../data/data";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./TripDetails.module.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 
 const TripDetails: React.FC = () => {
-  const location = useLocation();
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
