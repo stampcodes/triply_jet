@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import $ from "jquery";
 import "jquery-scrollify";
 
@@ -31,34 +31,65 @@ interface ScrollifyOptions {
 }
 
 const useScrollify = () => {
+  const [isScrollifyInitialized, setIsScrollifyInitialized] = useState(false);
+
+  const isDesktop = () => {
+    return (
+      window.innerWidth > 768 && !/Mobi|Android/i.test(navigator.userAgent)
+    );
+  };
+
   useEffect(() => {
-    $.scrollify({
-      section: ".div-scrollify",
-      sectionName: false,
-      interstitialSection: "",
-      easing: "easeOutExpo",
-      scrollSpeed: 1100,
-      offset: 0,
-      scrollbars: true,
-      setHeights: false,
-      overflowScroll: true,
-      updateHash: false,
-      touchScroll: true,
-      before: function () {},
-      after: function () {},
-      afterResize: function () {
-        $.scrollify.update();
-      },
-      afterRender: function () {
-        $.scrollify.update();
-      },
-    });
+    const handleResize = () => {
+      if (isDesktop()) {
+        if (!isScrollifyInitialized) {
+          $.scrollify({
+            section: ".div-scrollify",
+            sectionName: false,
+            interstitialSection: "",
+            easing: "easeOutExpo",
+            scrollSpeed: 1100,
+            offset: 0,
+            scrollbars: true,
+            setHeights: false,
+            overflowScroll: true,
+            updateHash: false,
+            touchScroll: true,
+            before: function () {},
+            after: function () {},
+            afterResize: function () {
+              $.scrollify.update();
+            },
+            afterRender: function () {
+              $.scrollify.update();
+            },
+          });
+          setIsScrollifyInitialized(true);
+        }
+      } else {
+        if (isScrollifyInitialized) {
+          $.scrollify.destroy();
+          setIsScrollifyInitialized(false);
+        }
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
 
     // Cleanup on unmount
     return () => {
-      $.scrollify.destroy();
+      window.removeEventListener("resize", handleResize);
+      if (isScrollifyInitialized) {
+        $.scrollify.destroy();
+      }
     };
-  }, []);
+  }, [isScrollifyInitialized]);
+
+  return null;
 };
 
 export default useScrollify;
