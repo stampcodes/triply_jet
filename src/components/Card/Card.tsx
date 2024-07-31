@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
-import { Card as CardType } from "../../data/data";
 
 interface CardProps {
   card: {
