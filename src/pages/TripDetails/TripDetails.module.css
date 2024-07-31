@@ -48,23 +48,3 @@
 .backButton:hover {
   background-color: #629ce8;
 }
-
-.payButton {
-  width: 150px;
-  background-color: #397cd6;
-  color: #ffffff;
-  font-weight: 700;
-  border: none;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 12px;
-  transition: background-color 0.3s ease;
-}
-
-.payButton:hover {
-  background-color: #629ce8;
-}

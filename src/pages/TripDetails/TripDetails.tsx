@@ -4,26 +4,26 @@ import Navbar from "../../components/Navbar/Navbar";
 import styles from "./TripDetails.module.css";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
+import PayButton from "../../components/PayButton/PayButton";
 
 const TripDetails: React.FC = () => {
   const navigate = useNavigate();
-  const { id } = useParams<{ id: string }>();
 
+  const { id } = useParams<{ id: string }>();
   if (!id) {
     return <div>Offer not found!</div>;
   }
 
   const tripId = parseInt(id, 10);
-
   if (isNaN(tripId)) {
     return <div>Offer not found!</div>;
   }
 
   const trip: Card | undefined = data.cards.find((card) => card.id === tripId);
-
   if (!trip) {
     return <div>Offer not found!</div>;
   }
+
   const handleBackClick = () => {
     navigate("/");
   };
@@ -43,7 +43,7 @@ const TripDetails: React.FC = () => {
         <p>{trip.details}</p>
         <p>Travel Dates: {trip.travelDates}</p>
         <p className={styles.price}>Price: {trip.price} ETH</p>
-        <button className={styles.payButton}>Pay Now!</button>
+        <PayButton price={trip.price} />
       </div>
     </>
   );
