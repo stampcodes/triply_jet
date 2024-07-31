@@ -43,3 +43,8 @@
   border-radius: 12px;
   transition: background-color 0.3s ease;
 }
+
+.cardPrice {
+  font-size: 20px;
+  font-weight: 700;
+}
