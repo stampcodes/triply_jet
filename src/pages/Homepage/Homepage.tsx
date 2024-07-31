@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
 import Offers from "../../components/Offers/Offers";
-import BenefitsSection from "../../components/BenefitsSection/BenefitsSection";
+import Benefits from "../../components/Benefits/Benefits";
 
 const Homepage: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Homepage: React.FC = () => {
       <Navbar />
       <Hero />
       <Offers />
-      <BenefitsSection />
+      <Benefits />
     </>
   );
 };

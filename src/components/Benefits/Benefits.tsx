@@ -1,6 +1,6 @@
-import styles from "./BenefitsSection.module.css";
+import styles from "./Benefits.module.css";
 
-const BenefitsSection: React.FC = () => {
+const Benefits: React.FC = () => {
   return (
     <>
       <section className={styles.container}>
@@ -35,4 +35,4 @@ const BenefitsSection: React.FC = () => {
   );
 };
 
-export default BenefitsSection;
+export default Benefits;
