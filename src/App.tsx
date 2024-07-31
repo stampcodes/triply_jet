@@ -1,16 +1,9 @@
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Offers from "./components/Offers/Offers";
-import BenefitsSection from "./components/BenefitsSection/BenefitsSection";
+import Homepage from "./pages/Homepage/Homepage";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Offers />
-      <BenefitsSection />
+      <Homepage />
     </>
   );
 };
