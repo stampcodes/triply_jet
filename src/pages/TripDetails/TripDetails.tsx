@@ -1,8 +1,13 @@
 import { useParams } from "react-router-dom";
 import data, { Card } from "../../data/data";
 import Navbar from "../../components/Navbar/Navbar";
+import styles from "./TripDetails.module.css";
+import { useLocation, useNavigate } from "react-router-dom";
+import { IoIosArrowBack } from "react-icons/io";
 
 const TripDetails: React.FC = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
   if (!id) {
@@ -20,17 +25,28 @@ const TripDetails: React.FC = () => {
   if (!trip) {
     return <div>Offer not found!</div>;
   }
+  const handleBackClick = () => {
+    navigate("/");
+  };
 
   return (
-    <div>
+    <>
       <Navbar />
-      <h1>{trip.name}</h1>
-      <img src={trip.image} alt={trip.name} />
-      <p>{trip.description}</p>
-      <p>{trip.details}</p>
-      <p>Travel Dates: {trip.travelDates}</p>
-      <p>Price: {trip.price} ETH</p>
-    </div>
+      <div className={styles.backIcon}>
+        <button className={styles.backButton} onClick={handleBackClick}>
+          <IoIosArrowBack />
+        </button>
+      </div>
+
+      <div className={styles.container}>
+        <h2 className={styles.title}>{trip.name}</h2>
+        <img className={styles.img} src={trip.image} alt={trip.name} />
+        <p>{trip.details}</p>
+        <p>Travel Dates: {trip.travelDates}</p>
+        <p className={styles.price}>Price: {trip.price} ETH</p>
+        <button className={styles.payButton}>Pay Now!</button>
+      </div>
+    </>
   );
 };
 

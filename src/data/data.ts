@@ -39,7 +39,7 @@ const data: { cards: Card[] } = {
       description:
         "Discover the ultimate tropical escape in Hawaii, with pristine beaches, lush landscapes, and a rich cultural heritage.",
       details:
-        "Discover the tropical paradise of Hawaii with an experience that takes you between pristine beaches and a rich cultural heritage. Arrive in Honolulu and immediately relax on the famous Waikiki Beach, enjoying the sunset and a dinner with an ocean view. Explore the island of Oahu, visiting the Diamond Head crater for breathtaking panoramic views, and Pearl Harbor for an immersion in World War II history. Relax on the North Shore beaches, famous for their waves and surfers, and discover Hawaiian culture by participating in hula and ukulele workshops. Visit local craft markets for unique souvenirs and take a catamaran excursion to spot dolphins and sea turtles. Conclude your days with beachfront dinners while enjoying the stunning Hawaiian sunsets, for an unforgettable experience in paradise.",
+        "Discover tropical paradise Hawaii: pristine beaches, rich cultural heritage. Relax on Waikiki Beach, enjoy sunset, dinner with ocean view. Explore Oahu: Diamond Head crater, Pearl Harbor history. Relax North Shore beaches, waves, surfers. Discover Hawaiian culture: hula, ukulele workshops. Visit craft markets, unique souvenirs. Catamaran excursion: spot dolphins, sea turtles. Conclude with beachfront dinners, stunning sunsets, unforgettable paradise experience.",
       travelDates: "1 May - 20 May",
       price: 0.1,
     },
