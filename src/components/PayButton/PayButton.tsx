@@ -4,7 +4,6 @@ import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { parseUnits } from "viem";
 import styles from "./PayButton.module.css";
 import { useState, useEffect } from "react";
-
 interface PayButtonProps {
   price: number;
 }

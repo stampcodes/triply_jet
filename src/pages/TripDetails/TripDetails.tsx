@@ -11,17 +11,17 @@ const TripDetails: React.FC = () => {
 
   const { id } = useParams<{ id: string }>();
   if (!id) {
-    return <div>Offer not found!</div>;
+    return <div className={styles.notFound}>Offer not found!</div>;
   }
 
   const tripId = parseInt(id, 10);
   if (isNaN(tripId)) {
-    return <div>Offer not found!</div>;
+    return <div className={styles.notFound}>Offer not found!</div>;
   }
 
   const trip: Card | undefined = data.cards.find((card) => card.id === tripId);
   if (!trip) {
-    return <div>Offer not found!</div>;
+    return <div className={styles.notFound}>Offer not found!</div>;
   }
 
   const handleBackClick = () => {

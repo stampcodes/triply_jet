@@ -48,3 +48,12 @@
 .backButton:hover {
   background-color: #629ce8;
 }
+
+.notFound {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background-color: #629ce8;
+}
