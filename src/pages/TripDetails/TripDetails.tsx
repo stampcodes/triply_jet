@@ -5,6 +5,7 @@ import styles from "./TripDetails.module.css";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import PayButton from "../../components/PayButton/PayButton";
+import { Helmet } from "react-helmet-async";
 
 const TripDetails: React.FC = () => {
   const navigate = useNavigate();
@@ -30,6 +31,9 @@ const TripDetails: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>TriplyJet - Offers</title>
+      </Helmet>
       <Navbar />
       <div className={styles.backIcon}>
         <button className={styles.backButton} onClick={handleBackClick}>
