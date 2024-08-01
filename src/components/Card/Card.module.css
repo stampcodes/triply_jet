@@ -37,7 +37,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 17px;
+  font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
@@ -52,4 +52,36 @@
 .cardButton a {
   text-decoration: none;
   color: inherit;
+}
+
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 300px;
+    padding: 7px;
+  }
+  .cardImage {
+    width: 285px;
+    height: 200px;
+    padding: 1px;
+  }
+  .cardDescription {
+    width: 290px;
+  }
+  .cardButton {
+    font-size: 15px;
+  }
+  .cardPrice {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+  .card {
+    width: 500px;
+    padding: 7px;
+  }
+  .cardPrice {
+    font-size: 25px;
+    font-weight: 700;
+  }
 }

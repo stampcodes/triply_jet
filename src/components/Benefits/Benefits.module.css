@@ -16,3 +16,31 @@
   width: 200px;
   height: 200px;
 }
+
+@media only screen and (max-width: 500px) {
+  .sec {
+    width: 300px;
+    flex-direction: column;
+  }
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .container {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+  .container {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+  }
+  .sec {
+    width: 500px;
+  }
+}

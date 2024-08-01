@@ -20,3 +20,30 @@
   flex-direction: row;
   margin-top: 50px;
 }
+
+@media only screen and (max-width: 500px) {
+  .title {
+    font-size: 30px;
+  }
+  .offersCard {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .offers {
+    margin-top: 300px;
+    margin-bottom: 370px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+  .offersCard {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .offers {
+    margin-top: 250px;
+    margin-bottom: 370px;
+  }
+}

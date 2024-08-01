@@ -57,3 +57,37 @@
   font-size: 50px;
   background-color: #629ce8;
 }
+
+@media only screen and (max-width: 500px) {
+  .container {
+    margin: 0;
+    width: auto;
+  }
+  .img {
+    width: 350px;
+  }
+
+  .backButton {
+    margin: 10px;
+  }
+
+  .backIcon {
+    margin-top: 85px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1024px) {
+  .container {
+    margin: 10px;
+    width: auto;
+  }
+  .img {
+    width: 700px;
+  }
+  .backButton {
+    margin: 10px;
+  }
+  .backIcon {
+    margin-top: 150px;
+  }
+}
