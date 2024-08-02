@@ -46,4 +46,9 @@
   .arrow {
     font-size: 40px;
   }
+
+  .hero {
+    width: auto;
+    height: 600px;
+  }
 }
