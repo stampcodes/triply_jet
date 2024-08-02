@@ -11,11 +11,12 @@
   flex-direction: column;
   justify-content: flex-start;
   color: #333333;
-  border: 1px solid lightgray;
+  border: none;
   margin: 7px;
   border-radius: 20px;
   padding: 10px;
   transition: background 0.5s, transform 0.5s;
+  background-color: #d2eaff;
 }
 
 .card:hover {
