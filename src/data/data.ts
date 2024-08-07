@@ -24,7 +24,7 @@ const data: { cards: Card[] } = {
     {
       id: 2,
       name: "Safari and Skyline South Africa",
-      image: "safari.png",
+      image: "/safari.png",
       description:
         "Embark on an adventure through South Africa's breathtaking landscapes, combining thrilling safaris with vibrant cityscapes.",
       details:
@@ -35,7 +35,7 @@ const data: { cards: Card[] } = {
     {
       id: 3,
       name: "Hawaiian Paradise",
-      image: "hawaii.png",
+      image: "/hawaii.png",
       description:
         "Discover the ultimate tropical escape in Hawaii, with pristine beaches, lush landscapes, and a rich cultural heritage.",
       details:
