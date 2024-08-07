@@ -1,4 +1,8 @@
-import { useAccount, useSendTransaction } from "wagmi";
+import {
+  useAccount,
+  useSendTransaction,
+  useWaitForTransactionReceipt,
+} from "wagmi";
 import { sepolia } from "viem/chains";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { parseUnits } from "viem";
@@ -9,12 +13,16 @@ interface PayButtonProps {
 }
 
 const PayButton: React.FC<PayButtonProps> = ({ price }) => {
-  const { sendTransactionAsync } = useSendTransaction();
+  const { sendTransactionAsync, data: hash } = useSendTransaction();
   const { address } = useAccount();
   const { open } = useWeb3Modal();
   const [started, setStarted] = useState(false);
   const [errors, setErrors] = useState("");
-  const [completed, setCompleted] = useState(false);
+
+  const { isLoading: isConfirming, isSuccess: isConfirmed } =
+    useWaitForTransactionReceipt({
+      hash,
+    });
 
   const handlePayment = async () => {
     try {
@@ -30,7 +38,7 @@ const PayButton: React.FC<PayButtonProps> = ({ price }) => {
         value: weiPrice,
         chainId: sepolia.id,
       });
-      setCompleted(true);
+
       console.log("Transaction data:", data);
     } catch (error) {
       console.log(error);
@@ -43,7 +51,6 @@ const PayButton: React.FC<PayButtonProps> = ({ price }) => {
   useEffect(() => {
     if (errors) {
       const timer = setTimeout(() => {
-        setCompleted(false);
         setErrors("");
       }, 2000);
       return () => clearTimeout(timer);
@@ -53,7 +60,7 @@ const PayButton: React.FC<PayButtonProps> = ({ price }) => {
   return (
     <>
       <div className={styles.container}>
-        {!completed && (
+        {!isConfirming && !isConfirmed && (
           <button
             disabled={started}
             className={styles.payButton}
@@ -62,12 +69,18 @@ const PayButton: React.FC<PayButtonProps> = ({ price }) => {
             {started ? "Confirming..." : "Pay Now"}
           </button>
         )}
-        {completed && (
+
+        {isConfirmed && (
           <p className={styles.successfulPayment}>
             Thank you for your payment.
           </p>
         )}
         {errors && <p className={styles.failedPayment}>{errors}</p>}
+        {isConfirming && (
+          <div className={styles.waitingPayment}>
+            Waiting for confirmation...
+          </div>
+        )}
       </div>
     </>
   );

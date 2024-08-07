@@ -31,6 +31,8 @@
   padding: 5px 10px;
   border-radius: 12px;
   background-color: #66bb6a;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .failedPayment {
@@ -39,6 +41,18 @@
   padding: 5px 10px;
   border-radius: 12px;
   background-color: #ff6666;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.waitingPayment {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background-color: #6666ff;
+  margin-top: 10px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
