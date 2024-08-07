@@ -8,16 +8,27 @@ import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { parseUnits } from "viem";
 import styles from "./PayButton.module.css";
 import { useState, useEffect } from "react";
+import { usePurchaseStore } from "../../store/purchaseStore";
 interface PayButtonProps {
   price: number;
+  itemName: string;
 }
 
-const PayButton: React.FC<PayButtonProps> = ({ price }) => {
+interface Purchase {
+  id: string;
+  item: string;
+  price: string;
+  date: string;
+}
+
+const PayButton: React.FC<PayButtonProps> = ({ price, itemName }) => {
   const { sendTransactionAsync, data: hash } = useSendTransaction();
   const { address } = useAccount();
   const { open } = useWeb3Modal();
   const [started, setStarted] = useState(false);
   const [errors, setErrors] = useState("");
+
+  const addPurchase = usePurchaseStore((state) => state.addPurchase);
 
   const { isLoading: isConfirming, isSuccess: isConfirmed } =
     useWaitForTransactionReceipt({
@@ -56,6 +67,19 @@ const PayButton: React.FC<PayButtonProps> = ({ price }) => {
       return () => clearTimeout(timer);
     }
   }, [errors]);
+
+  useEffect(() => {
+    if (isConfirmed && hash) {
+      const newPurchase: Purchase = {
+        id: hash,
+        item: itemName,
+        price: `${price} ETH`,
+        date: new Date().toLocaleDateString(),
+      };
+      addPurchase(newPurchase);
+      setStarted(false);
+    }
+  }, [isConfirmed, hash, itemName, price, addPurchase]);
 
   return (
     <>
