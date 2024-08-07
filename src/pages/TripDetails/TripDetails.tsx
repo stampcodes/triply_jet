@@ -29,6 +29,10 @@ const TripDetails: React.FC = () => {
     navigate("/");
   };
 
+  const GoToSummary = () => {
+    navigate("/purchase");
+  };
+
   return (
     <>
       <Helmet>
@@ -39,6 +43,9 @@ const TripDetails: React.FC = () => {
         <button className={styles.backButton} onClick={handleBackClick}>
           <IoIosArrowBack />
         </button>
+        <button className={styles.GoToSummary} onClick={GoToSummary}>
+          Purchases
+        </button>
       </div>
 
       <div className={styles.container}>
@@ -47,7 +54,7 @@ const TripDetails: React.FC = () => {
         <p>{trip.details}</p>
         <p>Travel Dates: {trip.travelDates}</p>
         <p className={styles.price}>Price: {trip.price} ETH</p>
-        <PayButton price={trip.price} />
+        <PayButton price={trip.price} itemName={trip.name} />
       </div>
     </>
   );

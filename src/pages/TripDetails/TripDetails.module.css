@@ -39,13 +39,32 @@
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  margin: 1px 100px;
+  margin: 1px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.GoToSummary {
+  background-color: #397cd6;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 0px 1px;
   cursor: pointer;
   border-radius: 12px;
   transition: background-color 0.3s ease;
 }
 
 .backButton:hover {
+  background-color: #629ce8;
+}
+.GoToSummary:hover {
   background-color: #629ce8;
 }
 
