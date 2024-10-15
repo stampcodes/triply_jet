@@ -51,7 +51,7 @@ npm install
 npm run dev
 ```
 
-5. Open http://localhost:5173/triply_jet/ to view it in the browser.
+5. Open http://localhost:5173/ to view it in the browser.
 
 ## Deployment
 
