@@ -30,13 +30,13 @@ This project facilitates the booking of trips using modern web development tools
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/stampcodes/triplyJet.git
+git clone https://github.com/stampcodes/triply_jet.git
 ```
 
 2. Navigate to the project directory:
 
 ```sh
-cd triplyJet
+cd triply_jet
 ```
 
 3. Install the dependencies:
@@ -51,7 +51,7 @@ npm install
 npm run dev
 ```
 
-5. Open http://localhost:5173/triplyJet/ to view it in the browser.
+5. Open http://localhost:5173/triply_jet/ to view it in the browser.
 
 ## Deployment
 
@@ -68,5 +68,3 @@ Distributed under the MIT License. See LICENSE for more information.
 ## Contact
 
 Andrea Fragnelli
-
-Project Link: https://github.com/stampcodes/triplyJet
